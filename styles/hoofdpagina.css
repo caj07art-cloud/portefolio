@@ -1,0 +1,566 @@
+.remove {
+  display: none;
+}
+@font-face {
+  font-family: P5-chaotic;
+  src: url(../fonts/Persona5MenuFontPrototype-Regular.ttf);
+}
+@font-face {
+  font-family: P5-regular;
+  src: url(../fonts/Expose-Regular.otf);
+}
+@font-face {
+  font-family: P5-main;
+  src: url(../fonts/Persona5main.ttf);
+}
+@font-face {
+  font-family: P5-bold;
+  src: url(../fonts/Markin-LT-Ultra-Bold.ttf);
+}
+@font-face {
+  font-family: P5-hatty;
+  src: url(../fonts/p5hatty-1.ttf);
+}
+.in-view {
+  transition: 1s;
+  padding-left: 10px;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  background: #000000;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+#p5background {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+  z-index: -5;
+  background-color: black;
+}
+#background_sticky {
+  width: 100vw;
+  height: 2500px;
+  position: absolute;
+  z-index: -4;
+  top: 1050px;
+  margin: 0;
+  display: block;
+  background-color: black;
+}
+#background_sticky #p5background2 {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: -3;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+#smooth-background-container {
+  width: 100vw;
+  height: 900px;
+  position: absolute;
+  z-index: -2;
+  margin: 0;
+  display: block;
+  background-color: black;
+}
+#smooth-background-container img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+header {
+  width: 100vw;
+  color: white;
+  margin: 0;
+}
+header .nav {
+  width: fit-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+}
+header .nav .li {
+  list-style: none;
+  display: inline;
+  font-size: 24px;
+  margin: 0 70px 0 70px;
+  font-family: p5-bold;
+  transition: 0.7s;
+}
+header .nav .li-animation {
+  font-size: 24px;
+  font-weight: 1000;
+  padding: 10px;
+  border-radius: 5px 0 0 0;
+  transition: 0.9s;
+}
+header .nav .li-animation:hover {
+  padding: 14px 6px 14px 6px;
+}
+header .nav a {
+  text-decoration: none;
+  color: white;
+}
+header .nav-animation {
+  margin-top: 15px;
+  transition: 1.5s;
+  border-radius: 15px 0 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.788);
+  padding: 15px 0 15px 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+main {
+  width: 100%;
+  height: fit-content;
+}
+main .s-one {
+  margin: 0;
+  height: 100vh;
+  max-height: 850px;
+}
+main .s-one div {
+  width: 100%;
+  height: 60px;
+  padding-top: 280px;
+}
+main .s-one div h1 {
+  color: white;
+  text-align: center;
+  font-size: 65px;
+  margin: 0;
+  font-family: P5-regular;
+}
+main .s-one div h1 .animatie {
+  display: inline-block;
+  transition: transform 0.25s ease, font-size 0.3s ease, color 0.3s ease;
+  margin: 1px;
+}
+main .s-one div h1 .animatie:hover {
+  transform: translateY(-10px);
+  font-size: 70px;
+  color: #ff0d00;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+main .s-two {
+  margin: 0;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  min-height: 280px;
+  background-color: #160000;
+  display: flex;
+  justify-content: center;
+}
+main .s-two h2 {
+  margin: 4px 0 12px 0;
+  font-family: p5-bold;
+}
+main .s-two div {
+  width: 360px;
+  margin-top: 50px;
+  transform: translateX(-190px);
+  height: 140px;
+  padding: 20px;
+  color: white;
+  font-size: 17px;
+  border-radius: 0 8px 0 8px;
+}
+main .s-two div p {
+  font-family: p5-bold;
+}
+main .s-two .imgMe {
+  width: 180px;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 0px 8px 8px 8px;
+  opacity: 0%;
+  transition: 0.8s ease;
+}
+main .s-two .imgMeAnimate {
+  opacity: 100%;
+  transform: translateX(10px);
+}
+main .s-two .AboutMeDiv {
+  transition: 1.5s ease;
+  background-color: rgba(255, 255, 255, 0);
+}
+main .s-two .AboutMeH2,
+main .s-two .AboutMeP {
+  transform: translateY(10px);
+  transition: 0.8s ease;
+  color: rgba(255, 255, 255, 0);
+}
+main .s-two .StandardAnimationDiv {
+  background-color: #661717;
+}
+main .s-two .StandardAnimationH2 {
+  color: white;
+  transform: translateY(-8px);
+}
+main .s-two .StandardAnimationP {
+  color: white;
+  transform: translateY(-8px);
+}
+main .s-tree {
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 0 0 50px 0;
+}
+main .s-tree .H2S3 {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0);
+  font-family: p5-bold;
+  background: rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  padding: 10px 30px 10px 30px;
+  margin: 50px 0 0 50%;
+  transform: translateX(-50%);
+  transition: 0.8s;
+}
+main .s-tree .H2S3-animation {
+  color: white;
+  transform: translateY(-8px);
+  transform: translateX(-50%);
+}
+main .s-tree .H2S3-animation:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateX(-50%);
+  margin-top: 45px;
+  padding-bottom: 15px;
+}
+main .s-tree #container-vaardigheden {
+  width: 80vw;
+  padding: 0 10vw 0 10vw;
+  height: fit-content;
+  color: white;
+  margin: 40px 0 0 0;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R,
+main .s-tree #container-vaardigheden .vaardigheid-L {
+  width: 900px;
+  padding: 30px 50px 30px 50px;
+  background-color: #000000;
+  margin: 0 0 35px 50%;
+  border-radius: 20px;
+  display: flex;
+  opacity: 0;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R .vaardigheidstext-container,
+main .s-tree #container-vaardigheden .vaardigheid-L .vaardigheidstext-container {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R .vaardigheidstext-container h3,
+main .s-tree #container-vaardigheden .vaardigheid-L .vaardigheidstext-container h3 {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 25px 0;
+  font-size: 24px;
+  font-family: p5-main;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R .vaardigheidstext-container p,
+main .s-tree #container-vaardigheden .vaardigheid-L .vaardigheidstext-container p {
+  text-align: center;
+  width: 100%;
+  font-family: p5-bold;
+  font-size: 20px;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R img,
+main .s-tree #container-vaardigheden .vaardigheid-L img {
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R {
+  transform: translateX(-47%);
+}
+main .s-tree #container-vaardigheden .vaardigheid-R img {
+  margin-left: 80px;
+}
+main .s-tree #container-vaardigheden .vaardigheid-R .vaardigheidstext-container {
+  margin-left: 80px;
+}
+main .s-tree #container-vaardigheden .vaardigheid-L {
+  transform: translateX(-53%);
+}
+main .s-tree #container-vaardigheden .vaardigheid-L .vaardigheidstext-container {
+  margin-left: 80px;
+}
+main .s-tree #container-vaardigheden .vaardigheid-L-animation,
+main .s-tree #container-vaardigheden .vaardigheid-R-animation {
+  transform: translateX(-50%);
+  transition: 0.8s ease;
+  opacity: 1;
+}
+main .s-four {
+  margin: 0;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  min-height: 160px;
+  background-color: #160000;
+}
+main .s-four .h2-s4 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0 0 20px 0;
+  font-family: p5-bold;
+  transform: translateY(25px);
+  opacity: 0;
+}
+main .s-four .h2-s4-animation {
+  transform: translateY(15px);
+  transition: 0.7s ease;
+  opacity: 1;
+}
+main .s-four ul {
+  margin: 0 0 0 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  color: white;
+}
+main .s-four ul .li-s4 {
+  color: white;
+  font-family: p5-hatty;
+  display: inline;
+  font-size: 26px;
+  margin: 0 20px 0 20px;
+  text-decoration: underline;
+  transform: translateY(15px);
+  opacity: 0;
+}
+main .s-four ul .li-s4-animation {
+  transform: translateY(0px);
+  transition: 1s ease;
+  opacity: 1;
+}
+main .s-five {
+  height: 880px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .s-five .div-1 {
+  height: 800px;
+  width: 30%;
+  margin: 0 4% 0 0;
+}
+main .s-five .div-1 .opleiding1 {
+  width: 90%;
+  background-color: black;
+  padding: 30px 5% 40px 5%;
+  margin: 100px 0 0 0;
+  color: white;
+  border-radius: 8px 12px 12px 8px;
+  opacity: 0;
+}
+main .s-five .div-1 .opleiding1 h3 {
+  margin: 8px 0 0 0;
+  padding: 0 0 5px 0;
+  width: fit-content;
+  font-size: 28px;
+  font-family: p5-bold;
+  text-decoration: underline;
+}
+main .s-five .div-1 .opleiding1 p {
+  margin: 18px 0 0 0;
+  width: fit-content;
+  font-size: 22px;
+  font-family: p5-hatty;
+}
+main .s-five .div-1 .Hobby’s {
+  width: 90%;
+  background-color: black;
+  padding: 30px 5% 40px 5%;
+  margin: 100px 0 0 0;
+  color: white;
+  border-radius: 8px 12px 12px 8px;
+  opacity: 0;
+}
+main .s-five .div-1 .Hobby’s h3 {
+  margin: 8px 0 0 0;
+  padding: 0 0 5px 0;
+  width: fit-content;
+  font-size: 28px;
+  font-family: p5-bold;
+  text-decoration: underline;
+}
+main .s-five .div-1 .Hobby’s p {
+  margin: 18px 0 0 0;
+  width: fit-content;
+  font-size: 22px;
+  font-family: p5-hatty;
+}
+main .s-five .div-1 .Hobby’s-animation,
+main .s-five .div-1 .opleiding1-animation {
+  opacity: 1;
+  transform: translateX(-1vw);
+  transition: 0.7s ease;
+}
+main .s-five .div-2 {
+  height: 800px;
+  width: 30%;
+  margin: 0 0 0 4%;
+}
+main .s-five .div-2 .opleiding2 {
+  width: 90%;
+  background-color: black;
+  padding: 30px 5% 40px 5%;
+  margin: 240px 0 0 0;
+  color: white;
+  border-radius: 12px 8px 8px 12px;
+  opacity: 0;
+}
+main .s-five .div-2 .opleiding2 h3 {
+  margin: 8px 0 0 0;
+  width: 100%;
+  font-size: 28px;
+  font-family: p5-bold;
+  text-align: right;
+  text-decoration: underline;
+}
+main .s-five .div-2 .opleiding2 p {
+  margin: 18px 0 0 0;
+  width: fit-content;
+  font-size: 22px;
+  font-family: p5-hatty;
+  width: 100%;
+  text-align: right;
+}
+main .s-five .div-2 .Talen {
+  width: 90%;
+  background-color: black;
+  padding: 30px 5% 40px 5%;
+  margin: 140px 0 0 0;
+  color: white;
+  border-radius: 12px 8px 8px 12px;
+  opacity: 0;
+}
+main .s-five .div-2 .Talen h3 {
+  margin: 8px 0 0 0;
+  width: 100%;
+  font-size: 28px;
+  font-family: p5-bold;
+  text-align: right;
+  text-decoration: underline;
+}
+main .s-five .div-2 .Talen p {
+  margin: 18px 0 0 0;
+  width: fit-content;
+  font-size: 22px;
+  font-family: p5-hatty;
+  width: 100%;
+  text-align: right;
+}
+main .s-five .div-2 .Talen-animation,
+main .s-five .div-2 .opleiding2-animation {
+  opacity: 1;
+  transform: translateX(1vw);
+  transition: 0.7s ease;
+}
+main .s-six {
+  margin: 0;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  min-height: 160px;
+  background-color: #160000;
+}
+main .s-six .h2-s6 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0 0 20px 0;
+  font-family: p5-bold;
+  transform: translateY(25px);
+  opacity: 0;
+}
+main .s-six .h2-s6-animation {
+  transform: translateY(15px);
+  transition: 0.7s ease;
+  opacity: 1;
+}
+main .s-six ul {
+  margin: 0 0 0 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+main .s-six ul .li-s6 {
+  color: white;
+  font-family: p5-hatty;
+  display: inline;
+  font-size: 26px;
+  margin: 0 20px 0 20px;
+  transform: translateY(25px);
+  opacity: 0;
+}
+main .s-six ul .li-s6-animation {
+  transform: translateY(5px);
+  transition: 1s ease;
+  opacity: 1;
+}
+/*.div-1
+        {
+            width: 50%;
+            margin: 0;
+            display: flex;
+            justify-content: end;
+
+            div
+            {
+                width: 510px;
+                height: 160px;
+                margin: 90px 100px 0 0;
+                right: 0;
+                border-left: 8px solid rgb(53, 41, 41);
+                border-top: 4px solid rgb(63, 50, 50);
+                background: rgb(65, 65, 78);
+                color: white;
+                padding: 0.6% 2% 0.6% 2%;
+                border-radius: 2px;
+
+                a
+                {
+                    font-size: 17px;
+                    color: rgb(102, 102, 255);
+                }
+                a:hover
+                {
+                    color: rgb(11, 11, 251);
+                }
+            }
+        }
+        .div-2
+        {
+            width: 50%;
+            margin: 0;
+            
+            img
+            {
+                margin: 80px 0 0 200px;
+            
+            }
+        }*/
